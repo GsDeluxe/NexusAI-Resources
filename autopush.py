@@ -9,7 +9,7 @@ def update_file():
     for item in [item for item in os.listdir("../Rebrands") if item.endswith(".py")]:
         os.system(f"sourcedefender encrypt ../Rebrands/{item}")
     for item in [item for item in os.listdir("../Rebrands") if item.endswith(".pye")]:
-        os.system("mv ../{item} ./Rebrands")
+        os.system(f"mv ../{item} ./Rebrands")
 
 def git_commit_push():
     try:
