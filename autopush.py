@@ -6,6 +6,10 @@ import subprocess
 def update_file():
     os.system("sourcedefender encrypt ../main_run.py")
     os.system("mv ../main_run.pye .")
+    for item in [item for item in os.listdir("../Rebrands") if item.endswith(".py")]:
+        os.system(f"sourcedefender encrypt ../{item}")
+    for item in [item for item in os.listdir("../Rebrands") if item.endswith(".pye")]:
+        os.system("mv ../{item} ./Rebrands")
 
 def git_commit_push():
     try:
